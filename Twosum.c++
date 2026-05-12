@@ -17,21 +17,21 @@ int main(){
     for(int i=0;i<n;i++){
         cin >> arr[i];
     }
-    int left=0;
-    int right=n-1;
-    unordered_map<int , int> mp;
-    while(left<right){
-        int sum=arr[right]+arr[left];
-        if(sum==target){
-            cout<<"Found";
+    int right=0;
+    int left=n-1;
+    while(right<left){
+        if(arr[right]+arr[left]==target){
+            cout<<"found";
             return 0;
         }
-        else if(sum<target){
-            left++;
+        else if(arr[right]+arr[left]<target){
+            right++;
         }
-        else right--;
+        else left--;
     }
     
+
+        
     
 
     return 0;
