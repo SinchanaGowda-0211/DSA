@@ -7,29 +7,22 @@ int main(){
     cin >> n;
 
     int arr[n];
+
+    
+
     for(int i=0;i<n;i++){
         cin >> arr[i];
     }
-    int mid=0;
-    int low=0;
-    int high=n-1;
-    while(mid<=high){
-        if(arr[mid]==0){
-            swap(arr[mid],arr[low]);
-            mid++;
-            low++;
-        }
-        else if(arr[mid]==1){
-            mid++;
-        }
-        else{
-            swap(arr[mid],arr[high]);
-            high--;
-        }
-
-    }
+    unordered_map<int,int> freq;
     for(int i=0;i<n;i++){
-        cout<<arr[i];
+        freq[arr[i]]++;
+        if(freq[arr[i]]>n/2){
+            cout<<arr[i];
+            break;
+        }
     }
+
+    
+
     return 0;
 }
