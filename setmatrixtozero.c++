@@ -25,7 +25,7 @@ int main(){
                 for(int k = 0; k < m; k++){
 
                     if(arr[i][k] != 0){
-                        arr[i][k] = -1;
+                        arr[i][k] = -1
                     }
                 }
 
