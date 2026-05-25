@@ -7,31 +7,26 @@ int main(){
     cin >> n;
 
     int arr[n];
-    int ans[n];
 
     for(int i=0;i<n;i++){
         cin >> arr[i];
     }
-
-    int posind = 0;
-    int negind = 0;
-
-    for(int i=0;i<n;i++){
-
-        if(arr[i] > 0){
-            posind++;
-        }
-        else{
-            negind++;
-        }
+    int ans[n];
+    int pos=0;
+    int neg=0;
+   for(int i=0;i<n;i++){
+    if(arr[i]>0){
+        ans[pos*2]=arr[i];
+        pos++;
     }
-    for(int i=0;i<n;i++){
-        if(posind>negind){
-            if(arr[i]>0){
-                
-            }
-        }
-        
+    else{
+        ans[neg*2+1]=arr[i];
+        neg++;
+    }
 
-    return 0;
-}
+   }
+   for(int i=0;i<n;i++){
+    cout<<ans[i];
+   }
+        return 0;
+    }
