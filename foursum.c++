@@ -64,7 +64,7 @@ int main() {
 
     for (auto it : ans) {
         for (auto x : it) {
-            cout << x << " ";
+            cout << x ;
         }
         cout << endl;
     }
