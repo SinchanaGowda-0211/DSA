@@ -1,31 +1,37 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
+int main(){
+vector<int> arr1={1,2,4,7};
+vector<int> arr2={3,5,6};
+vector<int> ans;
+int m=4;
+int n=3;
+int right=0;
+int left=0;
+int index=0;
 
-int main() {
-    vector<vector<int>> intervals = {
-        {1,3},
-        {2,6},
-        {8,10},
-        {15,18}
-    };
-
-    sort(intervals.begin(), intervals.end());
-
-    vector<vector<int>> ans;
-
-    for(int i = 0; i < intervals.size(); i++) {
-
-        if(ans.empty() || intervals[i][0] > ans.back()[1]) {
-            ans.push_back(intervals[i]);
-        }
-        else {
-            ans.back()[1] = max(ans.back()[1], intervals[i][1]);
-        }
+while(left < m && right < n){
+    if(arr1[left] >= arr2[right]){
+        ans.push_back(arr2[right]);
+        right++;
     }
-
-    for(auto it : ans) {
-        cout << "[" << it[0] << "," << it[1] << "] ";
+    else{
+        ans.push_back(arr1[left]);
+        left++;
     }
+}
 
-    return 0;
+while(left < m){
+    ans.push_back(arr1[left]);
+    left++;
+}
+
+while(right < n){
+    ans.push_back(arr2[right]);
+    right++;
+}
+for(int i=0;i<ans.size();i++){
+    cout<<ans[i];
+}
+return 0;
 }
