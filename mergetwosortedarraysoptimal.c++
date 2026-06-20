@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    vector<int> nums1 = {-5, -2, 4, 5};
+    vector<int> nums1 = {-5, -2, 4, 6};
     vector<int> nums2 = {-3, 1, 8};
 
     int m = nums1.size();
