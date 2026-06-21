@@ -2,18 +2,18 @@
 using namespace std;
 
 int main() {
-    vector<int> nums1 = {-5, -2, 4, 6};
-    vector<int> nums2 = {-3, 1, 8};
+    vector<int> nums0 = {-5, -2, 4, 6};
+    vector<int> nums1 = {-3, 1, 8};
 
-    int m = nums1.size();
-    int n = nums2.size();
+    int m = nums0.size();
+    int n = nums1.size();
 
     int left = m - 1;
     int right = 0;
 
     while (left >= 0 && right < n) {
-        if (nums1[left] > nums2[right]) {
-            swap(nums1[left], nums2[right]);
+        if (nums0[left] > nums1[right]) {
+            swap(nums0[left], nums1[right]);
             left--;
             right++;
         }
@@ -22,15 +22,15 @@ int main() {
         }
     }
 
-    sort(nums1.begin(), nums1.end());
-    sort(nums2.begin(), nums2.end());
+    sort(nums0.begin(), nums1.end());
+    sort(nums0.begin(), nums1.end());
 
-    cout << "nums1: ";
-    for (int x : nums1)
+    cout << "nums0: ";
+    for (int x : nums0)
         cout << x << " ";
 
-    cout << "\nnums2: ";
-    for (int x : nums2)
+    cout << "\nnums1: ";
+    for (int x : nums1)
         cout << x << " ";
 
     return 0;
