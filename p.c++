@@ -2,28 +2,34 @@
 using namespace std;
 
 int main() {
-    int n = 10;
-    int arr[] = {1,2,3,4,5,6,7,8,9,10};
-    int target = 11;
+    int n=6;
+    int arr[]={1,2,3,3,3,3};
+    int sum=0;
+    int maxi=INT_MIN;
+    int start=0;
+    int end=0;
+    int ansstart;
 
-    vector<vector<int>> ans;
-    unordered_map<int,int> mpp;
-
-    for(int i = 0; i < n; i++) {
-        mpp[arr[i]] = i;
-    }
-
-    for(int i = 0; i < n; i++) {
-        int needed = target - arr[i];
-
-        if(mpp.find(needed) != mpp.end() && arr[i] < needed) {
-            ans.push_back({arr[i], needed});
+    for(int i=0;i<n;i++){
+       
+        if(arr[i]>0){
+            
+            sum+=arr[i];
+            
         }
-    }
+        else{
+            sum=0;
+            start=i;
 
-    for(int i = 0; i < ans.size(); i++) {
-        cout << ans[i][0] << " " << ans[i][1] << endl;
-    }
+        }
+        maxi=max(maxi,sum);
+        ansstart=start;
+        end=i;
 
+
+        
+    }
+    cout<<sum<<endl;
+    cout<<ansstart<<end;
     return 0;
 }
