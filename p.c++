@@ -3,16 +3,12 @@ using namespace std;
 int main(){
     int n;
     cin>>n;
-    int arr[n];
-    int target;
-    cin>>target;
+    int arr[]={(1,0),(2,4),(3,6),(4,5)};
+    sort(arr,arr+4);
+    vector<int> ans;
     for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
-            for(int k=j+1;k<n;k++){
-                
-            }
-        }
+        for(int j=)
     }
-     
-    return 0;
+
+    
 }
