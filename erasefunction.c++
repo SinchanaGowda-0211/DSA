@@ -4,7 +4,8 @@ using namespace std;
 int main(){
 
     string s1 = "Swativishwanath";
-    s1.erase(5);
+    s1.erase(4
+    );
     cout << s1 << endl;
 
     string s2 = "Computer";
