@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 
-    string s1 = "Computer";
+    string s1 = "Swativishwanath";
     s1.erase(5);
     cout << s1 << endl;
 
