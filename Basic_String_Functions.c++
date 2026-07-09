@@ -4,7 +4,7 @@ using namespace std;
 int main() {
 
     string s = "Programming";
-    string t = " Language";
+    string t = " Sanjana";
 
     cout << "Original String : " << s << endl;
 
