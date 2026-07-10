@@ -3,7 +3,7 @@ using namespace std;
 int main(){
     string s = "Programming";
 
-if(s.find("gram") != string::npos)
+if(s.find("mmin") != string::npos)
 {
     cout << "Found";
 }
